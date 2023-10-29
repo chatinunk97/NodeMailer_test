@@ -68,6 +68,7 @@ Follow the Freecodecamp instruction on this
 ## Sending the mail
 
 1. Paste the mailOptions in the same file
+** --- ---- is indicating a variable don't put in the ---
 ```js
 let mailOptions = {
     from: "---ANYNAME--- <---EMAIL--->",
