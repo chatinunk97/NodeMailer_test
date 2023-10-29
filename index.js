@@ -20,8 +20,9 @@ let transporter = nodemailer.createTransport({
     from: "Boss Tester <chatinun.hobby@gmail.com>",
     to: "chatinun_cd46@hotmail.com",
     subject: 'Nodemailer Project',
-    html: '<h1>Hi from your nodemailer project</h1>'
+    html: '<div><h1>Hi from your nodemailer project</h1><img src="https://picsum.photos/200/300"><img></div>'
   };
+
   transporter.sendMail(mailOptions, function(err, data) {
     if (err) {
       console.log("Error " + err);
@@ -29,6 +30,10 @@ let transporter = nodemailer.createTransport({
       console.log("Email sent successfully");
     }
   });
+
+
+
+  
 app.listen(port, () => {
   console.log(`nodemailerProject is listening at http://localhost:${port}`)
 })
