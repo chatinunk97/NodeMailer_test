@@ -5,11 +5,8 @@
 <div align="center">
     <h3> This is a quick tutorial for NodeMailer </h3>
 
-- This README template was originally from
-<a href="https://github.com/othneildrew/Best-README-Template/tree/master">
-here
-</a>
-\*\* This is just for my own reference the full turoial is from <a href="https://www.freecodecamp.org/news/use-nodemailer-to-send-emails-from-your-node-js-server/">Freecodecampe</a>
+- This README template was originally from <a href="https://github.com/othneildrew/Best-README-Template/tree/master">here</a>
+** This is just for my own reference the full turoial is from <a href="https://www.freecodecamp.org/news/use-nodemailer-to-send-emails-from-your-node-js-server/">Freecodecamp</a>
 </div>
 
 <!-- ABOUT THE PROJECT -->
@@ -63,3 +60,29 @@ let transporter = nodemailer.createTransport({
 ```
 
 ## Setup with Google Cloud Platform
+Follow the Freecodecamp instruction on this
+1. Create a google cloud platform account (with Gmail is OK)
+
+2. We will use OAuth get all the token and setup in .env file
+
+## Sending the mail
+
+1. Paste the mailOptions in the same file
+```js
+let mailOptions = {
+    from: "---ANYNAME--- <---EMAIL--->",
+    to: "---EMAIL---",
+    subject: 'Nodemailer Project',
+    html: '<h1>Hi from your nodemailer project</h1>'
+  };
+```
+2. Send the mail with transporter
+```js
+transporter.sendMail(mailOptions, function(err, data) {
+    if (err) {
+      console.log("Error " + err);
+    } else {
+      console.log("Email sent successfully");
+    }
+  });
+```
